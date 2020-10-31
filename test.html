@@ -38,13 +38,14 @@ nope
   
 <a href="googlechrome://navigate?url=qr.nspk.ru%2FAS100001ORTF4GAF80KPJ53K186D9A3G%3Ftype%3D01%26bank%3D100000000007%26crc%3D0C8A;end">Chrome view encoded</a><br><br>
   
-<button id='shareButton'>Share</button>  
+<button id='shareButton'>window open</button>  
   
 <a href=""></a><br><br>
  
 <script>
   shareButton.addEventListener('click', event => {
-  if (navigator.share) {
+  window.open('https://qr.nspk.ru/AS100001ORTF4GAF80KPJ53K186D9A3G?type=01&bank=100000000007&crc=0C8A', '_system');
+  /*if (navigator.share) {
     navigator.share({
       title: 'СБП',
       url: 'https://qr.nspk.ru/AS100001ORTF4GAF80KPJ53K186D9A3G?type=01&bank=100000000007&crc=0C8A'
@@ -54,7 +55,7 @@ nope
     .catch(console.error);
   } else {
     shareDialog.classList.add('is-open');
-  }
+  }*/
 });
 </script>
   
